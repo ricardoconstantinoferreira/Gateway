@@ -30,3 +30,4 @@ For information about a UI component in Magento 2, see [Overview of UI component
 
 For information about significant changes in patch releases, see [Release information](https://devdocs.magento.com/guides/v2.4/release-notes/bk-release-notes.html).
 # Gateway
+# Gateway
