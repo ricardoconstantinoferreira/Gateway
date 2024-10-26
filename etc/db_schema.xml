@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="rcferreira_gateway" resource="default" engine="innodb" comment="Module to connect in external api">
+        <column xsi:type="int" name="entity_id" padding="11" unsigned="true" nullable="false" identity="true" comment="Entity Id"/>
+        <column name="environment" nullable="false" xsi:type="varchar" comment="Envoronment" length="255"/>
+        <column name="method" nullable="false" xsi:type="varchar" comment="method" length="255"/>
+        <column name="path" nullable="false" xsi:type="varchar" comment="path" length="255"/>
+        <column name="parameters" nullable="true" xsi:type="longtext" comment="parameters" />
+
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+    </table>
+</schema>

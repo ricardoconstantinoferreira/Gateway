@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="RCFerreira_Gateway::menu" title="RC Ferreira Gateway" module="RCFerreira_Gateway" resource="RCFerreira_Gateway::menu" sortOrder="11"/>
+        <add id="RCFerreira_Gateway::gateway" title="Gateway" module="RCFerreira_Gateway"
+             resource="RCFerreira_Gateway::gateway"
+             parent="RCFerreira_Gateway::menu"
+             action="rcferreira_gateway/gateway/index"/>
+    </menu>
+</config>

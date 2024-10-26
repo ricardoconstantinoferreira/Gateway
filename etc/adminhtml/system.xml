@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="ferreira" translate="label" sortOrder="1">
+            <label>RCFerreira</label>
+        </tab>
+        <section id="ferreira_gateway" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>RCFerreira Module Gateway Http</label>
+            <tab>ferreira</tab>
+            <resource>RCFerreira_Gateway::config_gateway</resource>
+
+            <group id="config_ferreira_gateway" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="0">
+                <label>Method</label>
+                <field id="environment" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Environment</label>
+                    <config_path>ferreira_gateway/general/environment</config_path>
+                </field>
+                <field id="method" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Method</label>
+                    <config_path>ferreira_gateway/general/method</config_path>
+                    <source_model>RCFerreira\Gateway\Model\Config\Source\Method</source_model>
+                </field>
+                <field id="path" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Path</label>
+                    <config_path>ferreira_gateway/general/path</config_path>
+                </field>
+
+                <field id="abandoned_cart_minute" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Inform Minute</label>
+                    <config_path>ferreira_gateway/general/abandoned_cart_minute</config_path>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

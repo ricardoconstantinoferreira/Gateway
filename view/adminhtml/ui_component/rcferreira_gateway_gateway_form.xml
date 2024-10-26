@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">rcferreira_gateway_gateway_form.rcferreira_gateway_gateway_form_data_source</item>
+        </item>
+        <item name="label" xsi:type="string" translate="true">General Information</item>
+        <item name="template" xsi:type="string">templates/form/collapsible</item>
+    </argument>
+    <settings>
+        <buttons>
+            <button name="save" class="RCFerreira\Gateway\Block\Adminhtml\Block\Edit\SaveButton"/>
+            <button name="delete" class="RCFerreira\Gateway\Block\Adminhtml\Block\Edit\DeleteButton"/>
+            <button name="back" class="RCFerreira\Gateway\Block\Adminhtml\Block\Edit\BackButton"/>
+        </buttons>
+        <namespace>rcferreira_gateway_gateway_form</namespace>
+        <dataScope>data</dataScope>
+        <deps>
+            <dep>rcferreira_gateway_gateway_form.rcferreira_gateway_gateway_form_data_source</dep>
+        </deps>
+    </settings>
+    <dataSource name="gateway_gateway_form_data_source">
+        <argument name="data" xsi:type="array">
+            <item name="js_config" xsi:type="array">
+                <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+            </item>
+        </argument>
+        <settings>
+            <submitUrl path="rcferreira_gateway/gateway/save"/>
+        </settings>
+        <dataProvider class="RCFerreira\Gateway\Model\Block\DataProvider" name="rcferreira_gateway_gateway_form_data_source">
+            <settings>
+                <requestFieldName>entity_id</requestFieldName>
+                <primaryFieldName>entity_id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+    <fieldset name="general">
+        <settings>
+            <label/>
+        </settings>
+        <field name="entity_id" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">gateway</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <visible>false</visible>
+                <dataScope>entity_id</dataScope>
+            </settings>
+        </field>
+
+        <field name="environment" sortOrder="20" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">gateway</item>
+                </item>
+            </argument>
+            <settings>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+                <dataType>text</dataType>
+                <label translate="true">Environment</label>
+                <dataScope>environment</dataScope>
+            </settings>
+        </field>
+        <field name="method" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">gateway</item>
+                </item>
+            </argument>
+            <settings>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+                <dataType>text</dataType>
+                <label translate="true">Method</label>
+                <dataScope>method</dataScope>
+            </settings>
+        </field>
+
+        <field name="path" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">gateway</item>
+                </item>
+            </argument>
+            <settings>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+                <dataType>text</dataType>
+                <label translate="true">PATH</label>
+                <dataScope>path</dataScope>
+            </settings>
+        </field>
+
+        <field name="parameters" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">gateway</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">Parameters</label>
+                <dataScope>parameters</dataScope>
+            </settings>
+        </field>
+    </fieldset>
+</form>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <preference for="RCFerreira\Gateway\Api\Data\GatewayInterface"
+                type="RCFerreira\Gateway\Model\Gateway" />
+
+    <preference for="RCFerreira\Gateway\Api\GatewayRepositoryInterface"
+                type="RCFerreira\Gateway\Model\GatewayRepository" />
+
+    <preference for="RCFerreira\Gateway\Api\Data\GatewaySearchResultsInterface"
+                type="RCFerreira\Gateway\Model\GatewaySearchResults" />
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="rcferreira_gateway_gateway_listing_data_source" xsi:type="string">
+                    RCFerreira\Gateway\Model\ResourceModel\Gateway\Collection
+                </item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="RCFerreira\Gateway\Model\ResourceModel\Gateway\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">rcferreira_gateway</argument>
+            <argument name="resourceModel" xsi:type="string">RCFerreira\Gateway\Model\ResourceModel\Gateway</argument>
+        </arguments>
+    </virtualType>
+
+</config>
