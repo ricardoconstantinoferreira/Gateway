@@ -15,4 +15,17 @@ class Gateway extends AbstractDb
         $this->_init(GatewayInterface::TABLE, GatewayInterface::ENTITY_ID);
     }
 
+    /**
+     * @return array
+     */
+    public function fetchAllData(): array
+    {
+        $connection = $this->getConnection();
+        $select = $connection->select()
+            ->from(GatewayInterface::TABLE)
+            ->query();
+
+        return $select->fetchAll();
+    }
+
 }
