@@ -61,7 +61,7 @@ class Save extends Action implements HttpPostActionInterface
             $this->gateway->setEnvironment($data['environment']);
             $this->gateway->setMethod($data['method']);
             $this->gateway->setPath($data['path']);
-            $this->gateway->setParameters($data['parameters']);
+            $this->gateway->setToken($data['token']);
 
             try {
                 $data['entity_id'] = $this->gatewayRepository->save($this->gateway);
@@ -96,7 +96,7 @@ class Save extends Action implements HttpPostActionInterface
             $this->gateway->setEnvironment($data['environment']);
             $this->gateway->setMethod($data['method']);
             $this->gateway->setPath($data['path']);
-            $this->gateway->setParameters($data['parameters']);
+            $this->gateway->setToken($data['token']);
             $this->gateway->setId(null);
             $id = $this->gatewayRepository->save($this->gateway);
 

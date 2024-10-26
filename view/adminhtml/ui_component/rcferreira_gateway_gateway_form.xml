@@ -105,7 +105,7 @@
             </settings>
         </field>
 
-        <field name="parameters" formElement="input">
+        <field name="token" formElement="input">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="source" xsi:type="string">gateway</item>
@@ -113,8 +113,8 @@
             </argument>
             <settings>
                 <dataType>text</dataType>
-                <label translate="true">Parameters</label>
-                <dataScope>parameters</dataScope>
+                <label translate="true">Token</label>
+                <dataScope>token</dataScope>
             </settings>
         </field>
     </fieldset>

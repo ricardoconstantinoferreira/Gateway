@@ -5,7 +5,7 @@
         <column name="environment" nullable="false" xsi:type="varchar" comment="Envoronment" length="255"/>
         <column name="method" nullable="false" xsi:type="varchar" comment="method" length="255"/>
         <column name="path" nullable="false" xsi:type="varchar" comment="path" length="255"/>
-        <column name="parameters" nullable="true" xsi:type="longtext" comment="parameters" />
+        <column name="token" nullable="true" xsi:type="longtext" comment="token" />
 
         <constraint xsi:type="primary" referenceId="PRIMARY">
             <column name="entity_id"/>

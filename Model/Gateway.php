@@ -85,19 +85,19 @@ class Gateway extends AbstractModel implements GatewayInterface
     }
 
     /**
-     * @param string $parameters
+     * @param string $token
      * @return GatewayInterface
      */
-    public function setParameters(string $parameters): GatewayInterface
+    public function setToken(string $token): GatewayInterface
     {
-        return $this->setData(self::PARAMETERS, $parameters);
+        return $this->setData(self::TOKEN, $token);
     }
 
     /**
      * @return string
      */
-    public function getParameters(): string
+    public function getToken(): string
     {
-        return $this->getData(self::PARAMETERS);
+        return $this->getData(self::TOKEN);
     }
 }

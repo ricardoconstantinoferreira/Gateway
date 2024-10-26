@@ -17,7 +17,7 @@ interface GatewayInterface
 
     public const PATH = 'path';
 
-    public const PARAMETERS = 'parameters';
+    public const TOKEN = 'token';
 
     /**
      * @param $entity_id
@@ -64,13 +64,13 @@ interface GatewayInterface
     public function getPath(): string;
 
     /**
-     * @param string $parameters
+     * @param string $token
      * @return GatewayInterface
      */
-    public function setParameters(string $parameters): GatewayInterface;
+    public function setToken(string $token): GatewayInterface;
 
     /**
      * @return string
      */
-    public function getParameters(): string;
+    public function getToken(): string;
 }
