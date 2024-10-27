@@ -6,7 +6,7 @@ namespace RCFerreira\Gateway\Model\Config\Source;
 
 use RCFerreira\Gateway\Model\ResourceModel\Gateway as GatewayResourceModel;
 
-class Environment implements \Magento\Framework\Option\ArrayInterface
+class Name implements \Magento\Framework\Option\ArrayInterface
 {
 
     public function __construct(
@@ -21,15 +21,16 @@ class Environment implements \Magento\Framework\Option\ArrayInterface
     public function toOptionArray()
     {
         $options = [];
-        $results = $this->gateway->fetchAllDataEnvironment();
+        $results = $this->gateway->fetchAllDataName();
 
         if (!empty($results)) {
             foreach ($results as $key => $result) {
-                $options[$key]['value'] = $result['environment'];
-                $options[$key]['label'] = $result['environment'];
+                $options[$key]['value'] = $result['name'];
+                $options[$key]['label'] = $result['name'];
             }
         }
 
         return $options;
     }
 }
+

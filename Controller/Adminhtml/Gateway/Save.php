@@ -58,8 +58,8 @@ class Save extends Action implements HttpPostActionInterface
                 }
             }
 
+            $this->gateway->setName($data['name']);
             $this->gateway->setEnvironment($data['environment']);
-            $this->gateway->setMethod($data['method']);
             $this->gateway->setPath($data['path']);
             $this->gateway->setToken($data['token']);
 
@@ -93,8 +93,8 @@ class Save extends Action implements HttpPostActionInterface
         } elseif ($redirect === 'close') {
             $resultRedirect->setPath('*/*/');
         } elseif ($redirect === 'duplicate') {
+            $this->gateway->setName($data['name']);
             $this->gateway->setEnvironment($data['environment']);
-            $this->gateway->setMethod($data['method']);
             $this->gateway->setPath($data['path']);
             $this->gateway->setToken($data['token']);
             $this->gateway->setId(null);

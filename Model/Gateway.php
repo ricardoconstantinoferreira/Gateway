@@ -34,6 +34,23 @@ class Gateway extends AbstractModel implements GatewayInterface
     }
 
     /**
+     * @param string $name
+     * @return GatewayInterface
+     */
+    public function setName(string $name): GatewayInterface
+    {
+        return $this->setData(self::NAME, $name);
+    }
+
+    /**
+     * @return string
+     */
+    public function getName(): string
+    {
+        return $this->getData(self::NAME);
+    }
+
+    /**
      * @param string $environment
      * @return GatewayInterface
      */
@@ -48,23 +65,6 @@ class Gateway extends AbstractModel implements GatewayInterface
     public function getEnvironment(): string
     {
         return $this->getData(self::ENVIRONMENT);
-    }
-
-    /**
-     * @param string $method
-     * @return GatewayInterface
-     */
-    public function setMethod(string $method): GatewayInterface
-    {
-        return $this->setData(self::METHOD, $method);
-    }
-
-    /**
-     * @return string
-     */
-    public function getMethod(): string
-    {
-        return $this->getData(self::METHOD);
     }
 
     /**

@@ -58,6 +58,22 @@
             </settings>
         </field>
 
+        <field name="name" sortOrder="20" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">gateway</item>
+                </item>
+            </argument>
+            <settings>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+                <dataType>text</dataType>
+                <label translate="true">Name</label>
+                <dataScope>name</dataScope>
+            </settings>
+        </field>
+
         <field name="environment" sortOrder="20" formElement="input">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
@@ -73,22 +89,6 @@
                 <dataScope>environment</dataScope>
             </settings>
         </field>
-        <field name="method" formElement="input">
-            <argument name="data" xsi:type="array">
-                <item name="config" xsi:type="array">
-                    <item name="source" xsi:type="string">gateway</item>
-                </item>
-            </argument>
-            <settings>
-                <validation>
-                    <rule name="required-entry" xsi:type="boolean">true</rule>
-                </validation>
-                <dataType>text</dataType>
-                <label translate="true">Method</label>
-                <dataScope>method</dataScope>
-            </settings>
-        </field>
-
         <field name="path" formElement="input">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">

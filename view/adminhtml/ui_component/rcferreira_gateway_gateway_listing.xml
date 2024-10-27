@@ -92,6 +92,22 @@
                 </item>
             </argument>
         </column>
+
+        <column name="name">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">text</item>
+                    <item name="editor" xsi:type="array">
+                        <item name="editorType" xsi:type="string">text</item>
+                        <item name="validation" xsi:type="array">
+                            <item name="required-entry" xsi:type="boolean">true</item>
+                        </item>
+                    </item>
+                    <item name="label" xsi:type="string" translate="true">Name</item>
+                </item>
+            </argument>
+        </column>
+
         <column name="environment">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
@@ -103,21 +119,6 @@
                         </item>
                     </item>
                     <item name="label" xsi:type="string" translate="true">Environment</item>
-                </item>
-            </argument>
-        </column>
-
-        <column name="method">
-            <argument name="data" xsi:type="array">
-                <item name="config" xsi:type="array">
-                    <item name="filter" xsi:type="string">text</item>
-                    <item name="editor" xsi:type="array">
-                        <item name="editorType" xsi:type="string">text</item>
-                        <item name="validation" xsi:type="array">
-                            <item name="required-entry" xsi:type="boolean">true</item>
-                        </item>
-                    </item>
-                    <item name="label" xsi:type="string" translate="true">Method</item>
                 </item>
             </argument>
         </column>

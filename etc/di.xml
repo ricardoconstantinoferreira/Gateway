@@ -11,6 +11,9 @@
     <preference for="RCFerreira\Gateway\Api\Data\GatewaySearchResultsInterface"
                 type="RCFerreira\Gateway\Model\GatewaySearchResults" />
 
+    <preference for="RCFerreira\Gateway\Api\GatewayTestInterface"
+                type="RCFerreira\Gateway\Model\GatewayTest" />
+
     <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
         <arguments>
             <argument name="collections" xsi:type="array">

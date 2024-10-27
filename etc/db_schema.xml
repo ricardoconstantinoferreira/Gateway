@@ -2,8 +2,8 @@
 <schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
     <table name="rcferreira_gateway" resource="default" engine="innodb" comment="Module to connect in external api">
         <column xsi:type="int" name="entity_id" padding="11" unsigned="true" nullable="false" identity="true" comment="Entity Id"/>
+        <column name="name" nullable="false" xsi:type="varchar" comment="Project's Name" length="255" />
         <column name="environment" nullable="false" xsi:type="varchar" comment="Envoronment" length="255"/>
-        <column name="method" nullable="false" xsi:type="varchar" comment="method" length="255"/>
         <column name="path" nullable="false" xsi:type="varchar" comment="path" length="255"/>
         <column name="token" nullable="true" xsi:type="longtext" comment="token" />
 

@@ -18,11 +18,23 @@ class Gateway extends AbstractDb
     /**
      * @return array
      */
-    public function fetchAllData(): array
+    public function fetchAllDataEnvironment(): array
     {
         $connection = $this->getConnection();
         $select = $connection->select()
             ->from(GatewayInterface::TABLE)
+            ->group('environment')
+            ->query();
+
+        return $select->fetchAll();
+    }
+
+    public function fetchAllDataName(): array
+    {
+        $connection = $this->getConnection();
+        $select = $connection->select()
+            ->from(GatewayInterface::TABLE)
+            ->group('name')
             ->query();
 
         return $select->fetchAll();
