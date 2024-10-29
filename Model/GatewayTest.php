@@ -16,7 +16,8 @@ class GatewayTest implements GatewayTestInterface
 
     public function execute(): void
     {
-       $response = $this->http->send("stores", "GET", null);
-       $teste = $response;
+       $response = $this->http->send("05633090/json", "GET", null);
+       print "<pre>";
+       print_r($response);
     }
 }

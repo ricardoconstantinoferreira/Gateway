@@ -57,7 +57,7 @@ class Http
             $response = $this->client->request(
                 $method,
                 $uri,
-                $parameters
+                [$parameters]
             );
 
             return $this->json->unserialize($response->getBody()->__toString());
