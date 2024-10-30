@@ -14,6 +14,9 @@ class GatewayTest implements GatewayTestInterface
         private Http $http
     ) {}
 
+    /**
+     * apenas para testar 
+     */
     public function execute(): void
     {
        $response = $this->http->send("05633090/json", "GET", null);
